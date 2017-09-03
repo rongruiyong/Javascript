@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>冒泡排序</title>
+	<script>
+		var arr = [1,4,6,23,18,5];
+		function sort(arr) {
+			var len = arr.length;
+			for(var i=0;i<len;i++){
+				for(var j=0;j<len-i-1;j++){
+					if(arr[j]>arr[j+1]){
+						var temp=arr[j+1];
+						arr[j+1]=arr[j];
+						arr[j]=temp;
+					}
+				}
+			}
+			return arr;
+		}
+		console.log(sort(arr));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

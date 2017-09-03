@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../jQuery/js/jquery-1.11.2.js"></script>
+	<script>
+		$(function(){
+			$("#btn").click(function(){
+				if($("#check").prop("checked")){	
+					$("#check").prop("checked",false);
+				} else {
+					$("#check").prop("checked",true);
+				}
+			})
+		})
+	</script>
+</head>
+<body>
+	<div>
+		<input type="checkbox" id="check" >
+		<label for="check">类型</label>
+		<button id="btn">选择</button>
+	</div>
+</body>
+</html>

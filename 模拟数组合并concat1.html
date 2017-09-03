@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var arr1=[1,2,3];
+		var arr2=[4,5,6];
+		function concat1(arr1,arr2) {
+			var arr3=[];
+			for(var i=0;i<arr1.length;i++) {
+				arr3[i] = arr1[i];
+			}
+			
+			for(var i=0;i<arr2.length;i++) {
+				arr3.push(arr2[i]);
+			}
+			return arr3;
+		}
+		console.log(concat1(arr1,arr2));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

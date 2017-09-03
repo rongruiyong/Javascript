@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var str = "dfh348fjidn937fjei3240fjd243";
+		var arr = [];
+		function num(str) {
+			var s = "";
+			for(var i=0;i<str.length;i++){
+				if(!isNaN(+str[i])){
+					s += str[i];
+					if(isNaN(+str[i+1])){
+						arr.push(+s);
+						s = "";
+					}
+				}
+			}
+			return arr;
+		}
+		console.log(num(str));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

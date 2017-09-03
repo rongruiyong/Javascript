@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		//实现两个功能:
+		//1.输入一个字符串或字母，不传参的情况应输出该字符串或字母的出现次数最多的项及其次数；
+		//2.传参的时候，应输出查询项出现了多少次。如果没有该项，则显示0次
+	    var str = "fdsggifjfgggiwgfrrhfgiwrgrgggj";
+	    function max(str,value) {
+	    	var obj = {};
+	    	for(var i=0;i<str.length;i++){
+	    		var key = str[i];
+	    		if(obj[key]){
+	    			obj[key]++;
+	    		} else {
+	    			obj[key] = 1;
+	    		}
+	    	}
+	    	var maxCount = 0;
+	    	var maxString = '';
+	    	for(var key in obj){
+	    		if(maxCount < obj[key]){
+	    			maxCount = obj[key];
+	    			maxString = key;
+	    		}
+	    	}
+	    	if(value){
+	    		if(obj[value]){
+	    			return value+"出现了"+obj[value]+"次";
+	    		} else {
+	    			return "该范围内未发现"+value;
+	    		}
+	    	} else {
+	    		return "出现最多的是:"+maxString+",出现了"+maxCount+"次";
+	    	}
+	    }
+		console.log(max(str));
+		console.log(max(str,"f"));
+		console.log(max(str,"a"));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

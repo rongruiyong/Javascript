@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var str = "1133847309";
+		function san(str) {
+			var num = (str.length)%3;
+			var s = str.substring(0,num);
+			var reg = str.substring(num);
+			var arr= [];
+			var t = "";
+			if(num!==0){
+				arr.push(s);
+			}
+			for(var i=0;i<reg.length;i++){
+				t += reg[i];
+				if(i%3==2){
+					arr.push(t);
+					t = "";
+				}
+			}
+			return arr.join(",");
+		}
+		console.log(san(str));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

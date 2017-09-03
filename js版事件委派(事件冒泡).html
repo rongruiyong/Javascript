@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="button" id="btn" value="添加">
+	<ul id="ul">
+		<li>001</li>
+		<li>002</li>
+		<li>003</li>
+		<li>004</li>
+		<li>005</li>
+	</ul>
+</body>
+    <script>
+    	var ul = document.getElementById("ul");
+    	var btn = document.getElementById("btn");
+    	var li = ul.getElementsByTagName("li");
+    	ul.onmouseover = function(event) {
+    		//兼容IE
+            var event = event || window.event;
+            //获取最具体的元素
+            var target = event.target || event.srcElement;
+            //判断这个元素是不是ul,如果是的话就不给它添加背景,我们只需要给li添加
+            if(target.nodeName.toLowerCase()!=="ul"){
+            	target.style.backgroundColor = "#f00";
+            }
+    	}
+    	ul.onmouseout = function(event) {
+    		var event = event || window.event;
+    		var target = event.target || event.srcElement;
+    		if(target.nodeName.toLowerCase()!=="ul"){
+    			target.style.backgroundColor = "";
+    		}
+    	}
+    	btn.onclick = function() {
+    		var createLi = document.createElement("li");
+    		var txt = document.createTextNode("我是新添加的li");
+    		createLi.appendChild(txt);
+    		ul.appendChild(createLi);
+
+    	}
+    </script>
+</html>

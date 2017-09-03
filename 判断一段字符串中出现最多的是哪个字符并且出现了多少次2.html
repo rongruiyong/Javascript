@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var str = "anfdififdfffffhgjf";
+		function max(str) {
+			var s = str.split("").sort().join("");
+			var reg =/(\w)\1+/g;
+			var maxCount = 0;
+			var maxString = '';
+			s.replace(reg,function(a,b){
+				if(maxCount < a.length){
+					maxCount = a.length;
+					maxString = b;
+				}
+			});
+			return "出现次数最多的是:"+maxString+",出现了"+maxCount+"次";
+		}
+		console.log(max(str));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var str = "web-kit-index";
+	function $(str) {
+		var str1 = str.split("-");
+		for(var i=1;i<str1.length;i++){
+			str1[i] = str1[i].charAt(0).toUpperCase()+str1[i].substring(1);
+		}
+		return str1.join("");
+	}
+	console.log($(str));
+</script>
+</html>

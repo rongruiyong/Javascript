@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选择排序</title>
+	<script>
+		var arr = [1,9,4,8,6,2];
+		function sort1(arr) {
+			var len = arr.length;
+			for(var i=0;i<len;i++){
+				for(var j=i+1;j<len;j++){
+					if(arr[i]>arr[j]){
+						var temp = arr[i];
+						arr[i] = arr[j];
+						arr[j] = temp;
+					}
+				}
+			}
+			return arr;
+		}
+		console.log(sort1(arr));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var str = "web-kit-index";
+	function to(str){
+        var reg = /-(\w)/g;
+        return str.replace(reg,function(a,b){
+        	return b.toUpperCase();
+        })
+	}
+	console.log(to(str));
+</script>
+</html>

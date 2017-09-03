@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		window.onload=function(){
+			var div1=document.getElementById("div1");
+			var boxName = {
+				width: "500px",
+				height: "180px",
+				backgroundColor: "#090",
+				margin: "0 auto",
+				textAlign: "center",
+				lineHeight: "180px",
+			}
+			for(var k in boxName){
+				div1.style[k] = boxName[k];
+			}
+			div1.innerHTML="哈哈";
+		}
+	</script>
+</head>
+<body>
+	<div id="div1"></div>
+</body>
+</html>
